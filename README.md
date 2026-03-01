@@ -6,10 +6,16 @@
 
 > **"Turn your AI from a blind code-generator into a strict Socratic mentor."**
 
-A curated set of rules, workflows, and configurations for the [Windsurf IDE](https://windsurf.com/), specifically designed for junior developers and self-taught engineers. This setup enforces architectural thinking, strict code hygiene, and continuous learning through the "Second Brain" protocol.
+A curated set of rules, workflows, and configurations for the [Windsurf IDE](https://codeium.com/windsurf), specifically designed for junior developers and self-taught engineers. This setup enforces architectural thinking, strict code hygiene, and continuous learning through the "Second Brain" protocol.
 
 ## 🎯 Why does this exist?
 Modern AI tools (like Cascade or Cursor) often write code *for* you, bypassing the learning process. This configuration restricts the AI, forcing it to explain the "Why", map out dependencies (using GitNexus), and wait for your approval before writing a single line of code.
+
+## 📖 The Philosophy: From Chatbot to Agent
+Why should a beginner switch to an Agentic IDE? It solves the friction of context switching and prevents "Tutorial Hell."
+Instead of copy-pasting code from a browser, this setup integrates the AI directly into your file system, forcing it to understand your architecture before suggesting changes.
+
+👉 **[Read the full Workflow Manifesto & Methodology](WHY_AGENTIC.md)**
 
 ## 📂 Repository Structure
 
@@ -18,11 +24,13 @@ windsurf-prejunior-config/
 ├── rules/
 │   └── global_rules.md       # The "Constitution" for Cascade (Copy to IDE settings)
 ├── workflows/
-│   └── review.md             # Custom Socratic Code Review workflow
+│   ├── review.md             # Custom Socratic Code Review workflow
+│   └── plan.md               # "No-Code" planning workflow
 ├── templates/
 │   ├── mcp_config.json       # Secure MCP setup (GitNexus + GitHub + Sequential Thinking)
 │   ├── .gitnexusignore       # Keep your AI's semantic graph clean
 │   └── plan.md               # The local project tracker (Memento strategy)
+├── WHY_AGENTIC.md            # Detailed Manifesto
 └── README.md
 ```
 

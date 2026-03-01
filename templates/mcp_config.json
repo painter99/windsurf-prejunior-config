@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "github": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "command": "npx",
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PAT}"
+      }
+    },
+    "gitnexus": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "gitnexus@latest",
+        "mcp"
+      ],
+      "disabled": false
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    }
+  }
+}

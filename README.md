@@ -6,7 +6,7 @@
 
 > **"Turn your AI from a blind code-generator into a strict Socratic mentor."**
 
-A curated set of rules, workflows, and configurations for the [Windsurf IDE](https://codeium.com/windsurf), specifically designed for junior developers and self-taught engineers. This setup enforces architectural thinking, strict code hygiene, and continuous learning through the "Second Brain" protocol.
+A curated set of rules, workflows, and configurations for the [Windsurf IDE](https://windsurf.com), specifically designed for junior developers and self-taught engineers. This setup enforces architectural thinking, strict code hygiene, and continuous learning through the "Second Brain" protocol.
 
 ## 🎯 Why does this exist?
 Modern AI tools (like Cascade or Cursor) often write code *for* you, bypassing the learning process. This configuration restricts the AI, forcing it to explain the "Why", map out dependencies (using GitNexus), and wait for your approval before writing a single line of code.

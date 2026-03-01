@@ -1,0 +1,26 @@
+# Infrastructure and libraries (Do not let AI index standard libraries)
+.venv/
+venv/
+env/
+__pycache__/
+node_modules/
+
+# Secrets (Security first)
+.env
+*.pem
+*.key
+
+# Git history
+.git/
+
+# AI Meta-data and Context files (Prevent circular logic)
+.gitnexus/
+.claude/
+AGENTS.md
+CLAUDE.md
+
+# Build outputs and dynamic data
+exports.json
+dist/
+build/
+docs/plan.md

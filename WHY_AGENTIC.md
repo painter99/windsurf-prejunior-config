@@ -10,12 +10,13 @@ The transition involves moving away from copy-pasting code from browser chats to
 -   **Cascade:** The integrated agent acting as a senior architect.
 -   **GitNexus (MCP):** Providing the AI with a semantic, graph-based understanding of the entire project structure.
 -   **GitHub MCP:** Connecting the local environment with the outside world and serving as an external memory bank.
+-   **Memory (MCP):** A local Knowledge Graph acting as the AI's Exocortex, tracking skills, preferences, and goals over time.
 
 ---
 
 ## 🧠 The Philosophy: "The Windsurf Constitution"
 
-In this setup, the user leads, and the AI supports. The AI is governed by strict rules (`.windsurfrules`) to prevent it from bypassing the learning process.
+In this setup, the user leads, and the AI supports. The AI is governed by strict rules (`.windsurfrules` or Global Rules) to prevent it from bypassing the learning process.
 
 ### Core Principles
 
@@ -29,7 +30,7 @@ We never assign vague tasks. When stuck, we define:
 The AI is forbidden from generating final code until explicitly asked. Instead, it must:
 -   Ask guiding questions.
 -   Help formulate hypotheses (Root Cause Analysis).
--   Explain the "WHY" using simple metaphors (e.g., from daily life).
+-   Explain the "WHY" using simple metaphors.
 
 #### 3. The 80/20 Rule
 -   **80% Planning (Chat Mode):** Discussing architecture, logic, and data flow.
@@ -37,10 +38,10 @@ The AI is forbidden from generating final code until explicitly asked. Instead, 
 *Logic comes first, syntax comes second.*
 
 #### 4. The Memento Strategy (Local Context)
-Every project maintains a `docs/plan.md` file. Before a single line of code is written, the AI must update the plan, and the user must approve it ("Read and sign").
+Every project maintains a `docs/plan.md` file. Before a single line of code is written, the AI must update the plan, and the user must approve it ("Read and signed").
 
-#### 5. The Exocortex (Global Context)
-Long-term knowledge and lessons learned are not stored in unreliable local chat history but are versioned in a private GitHub repository. The AI reads this "Brain" file at the start of every project to understand the user's current skill level.
+#### 5. The Exocortex (Global Context via MCP Memory)
+Long-term knowledge and lessons learned are not stored in unreliable local chat history. Instead, they are structured as Entities and Relations in a local graph database (accessed via the Memory MCP). The AI reads this Graph at the start of every session (Epistemic Sync) to understand the user's current skill level.
 
 ---
 
@@ -56,8 +57,8 @@ This workflow solves the biggest problem beginners face with standard AI assista
 *   **Result:** You spend more time explaining the project to the AI than actually learning.
 
 ✅ **The New Way (Agentic IDE)**
-*   **Integration:** The AI sees the repository, understands the dependencies (via GitNexus), and knows the user's history.
-*   **Flow:** The AI updates the `plan.md`, and we immediately dive into problem-solving.
+*   **Integration:** The AI sees the repository, understands the dependencies (via GitNexus), and knows the user's history (via Exocortex/Memory Graph).
+*   **Flow:** The AI updates `docs/plan.md`, and we immediately dive into problem-solving.
 *   **Result:** A seamless transition from writing isolated scripts to building complex systems with a mentor who always sees the big picture.
 
 ---

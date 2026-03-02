@@ -6,7 +6,7 @@
 
 > **"Turn your AI from a blind code-generator into a strict Socratic mentor."**
 
-A curated set of rules, workflows, and configurations for the [Windsurf IDE](https://windsurf.com), specifically designed for junior developers and self-taught engineers. This setup enforces architectural thinking, strict code hygiene, and continuous learning through the "Second Brain" protocol.
+A curated set of rules, workflows, and configurations for the [Windsurf IDE](https://windsurf.com), specifically designed for junior developers and self-taught engineers. This setup enforces architectural thinking, strict code hygiene, and continuous learning through the local Exocortex protocol.
 
 ## 🎯 Why does this exist?
 Modern AI tools (like Cascade or Cursor) often write code *for* you, bypassing the learning process. This configuration restricts the AI, forcing it to explain the "Why", map out dependencies (using GitNexus), and wait for your approval before writing a single line of code.
@@ -27,7 +27,7 @@ windsurf-prejunior-config/
 │   ├── review.md             # Custom Socratic Code Review workflow
 │   └── plan.md               # "No-Code" planning workflow
 ├── templates/
-│   ├── mcp_config.json       # Secure MCP setup (GitNexus + GitHub + Sequential Thinking)
+│   ├── mcp_config.json       # Secure MCP setup
 │   ├── .gitnexusignore       # Keep your AI's semantic graph clean
 │   └── plan.md               # The local project tracker (Memento strategy)
 ├── WHY_AGENTIC.md            # Detailed Manifesto
@@ -37,7 +37,7 @@ windsurf-prejunior-config/
 ## 🚀 How to use this setup
 
 ### 1. Global Rules (The Core)
-Copy the contents of `rules/global_rules.md` into your Windsurf Global Rules settings (`Settings > Cascade Rules > Global`). Adjust the bracketed information `[like this]` to fit your persona.
+Copy the contents of `rules/global_rules.md` into your Windsurf Global Rules settings (`Settings > Cascade Rules > Global`).
 
 ### 2. Socratic Code Review
 Place `workflows/review.md` into your project's `.windsurf/workflows/` directory. 
@@ -47,10 +47,11 @@ Trigger it in the Cascade chat by typing `/review`. Instead of just fixing bugs,
 The `templates/mcp_config.json` demonstrates how to securely connect:
 1. **GitNexus:** For AST-based semantic code graphs (Blast radius analysis).
 2. **GitHub MCP:** For remote repository management using securely stored environmental variables (`${env:GITHUB_PAT}`).
-3. **Sequential Thinking:** For forcing the AI to break down complex logical puzzles.
+3. **Memory:** For your local Knowledge Graph (Exocortex) that tracks your skills, preferences, and goals.
+4. **Sequential Thinking:** For forcing the AI to break down complex logical puzzles.
 
-### 4. The "Second Brain" Protocol
-This config utilizes a highly advanced Exocortex setup. It forces the AI to read a centralized `brain.md` file from a private GitHub repository at the start of every session, allowing the AI to remember your skill level, previous mistakes, and architectural preferences across completely different local projects.
+### 4. The Exocortex Protocol
+This config utilizes a highly advanced local memory setup. It forces the AI to read an MCP Memory Graph at the start of every session, allowing the AI to remember your skill level, previous mistakes, and architectural preferences locally without relying on external repositories.
 
 ## 💡 Core Philosophies Enforced
 *   **80/20 Rule:** 80% planning in Chat mode, 20% execution in Write mode.

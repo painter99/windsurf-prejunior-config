@@ -22,14 +22,13 @@ Instead of copy-pasting code from a browser, this setup integrates the AI direct
 ```text
 windsurf-prejunior-config/
 ├── rules/
-│   └── global_rules.md       # The "Constitution" for Cascade (Copy to IDE settings)
+│   └── global_rules.md       # The "Constitution" for Cascade
 ├── workflows/
-│   ├── review.md             # Custom Socratic Code Review workflow
-│   └── plan.md               # "No-Code" planning workflow
+│   └── review.md             # Custom Socratic Code Review workflow
 ├── templates/
 │   ├── mcp_config.json       # Secure MCP setup
 │   ├── .gitnexusignore       # Keep your AI's semantic graph clean
-│   └── plan.md               # The local project tracker (Memento strategy)
+│   └── plan.md               # The local project tracker
 ├── WHY_AGENTIC.md            # Detailed Manifesto
 └── README.md
 ```

@@ -55,4 +55,4 @@ This config utilizes a highly advanced local memory setup. It forces the AI to r
 ## 💡 Core Philosophies Enforced
 *   **80/20 Rule:** 80% planning in Chat mode, 20% execution in Write mode.
 *   **GAR Method:** Define **G**oals, **A**ttempts, and **R**oadblocks before asking for help.
-*   **Docs-as-Code:** Keeping `plan.md` in the root of every project.
+*   **Docs-as-Code:** Keeping `docs/plan.md` in every project (local only).

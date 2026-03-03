@@ -31,6 +31,7 @@ The AI is forbidden from generating final code until explicitly asked. Instead, 
 -   Ask guiding questions.
 -   Help formulate hypotheses (Root Cause Analysis).
 -   Explain the "WHY" using simple metaphors.
+-   Communicate in English while keeping standard technical terms in professional form.
 
 #### 3. The 80/20 Rule
 -   **80% Planning (Chat Mode):** Discussing architecture, logic, and data flow.
@@ -38,7 +39,7 @@ The AI is forbidden from generating final code until explicitly asked. Instead, 
 *Logic comes first, syntax comes second.*
 
 #### 4. The Memento Strategy (Local Context)
-Every project maintains a `docs/plan.md` file. Before a single line of code is written, the AI must update the plan, and the user must approve it ("Read and signed").
+Every project maintains a `docs/plan.md` file. Before a single line of code is written, the AI must update the plan, and the user must approve it ("Read and sign off.").
 
 #### 5. The Exocortex (Global Context via MCP Memory)
 Long-term knowledge and lessons learned are not stored in unreliable local chat history. Instead, they are structured as Entities and Relations in a local graph database (accessed via the Memory MCP). The AI reads this Graph at the start of every session (Epistemic Sync) to understand the user's current skill level.

@@ -26,12 +26,18 @@
         "@modelcontextprotocol/server-sequential-thinking"
       ]
     },
-    "memory": {
-      "command": "npx",
+    "memory-service": {
+      "command": "/path/to/your/venv/bin/python",
       "args": [
-        "-y",
-        "@modelcontextprotocol/server-memory"
-      ]
+        "-m",
+        "mcp_memory_service.server",
+        "server"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "/path/to/your/memory.db",
+        "STORAGE_BACKEND": "sqlite_vec",
+        "SQLITE_VEC_PATH": "/path/to/your/memory.db"
+      }
     }
   }
 }

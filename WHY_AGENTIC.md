@@ -10,7 +10,7 @@ The transition involves moving away from copy-pasting code from browser chats to
 -   **Cascade:** The integrated agent acting as a senior architect.
 -   **GitNexus (MCP):** Providing the AI with a semantic, graph-based understanding of the entire project structure.
 -   **GitHub MCP:** Connecting the local environment with the outside world and serving as an external memory bank.
--   **Memory (MCP):** A local Knowledge Graph acting as the AI's Exocortex, tracking skills, preferences, and goals over time.
+-   **Memory Service (MCP):** A local vector database (SQLite) acting as the AI's Exocortex. It tracks skills, preferences, and goals over time using semantic tag-based search.
 
 ---
 
@@ -41,8 +41,8 @@ The AI is forbidden from generating final code until explicitly asked. Instead, 
 #### 4. The Memento Strategy (Local Context)
 Every project maintains a `docs/plan.md` file. Before a single line of code is written, the AI must update the plan, and the user must approve it ("Read and sign off.").
 
-#### 5. The Exocortex (Global Context via MCP Memory)
-Long-term knowledge and lessons learned are not stored in unreliable local chat history. Instead, they are structured as Entities and Relations in a local graph database (accessed via the Memory MCP). The AI reads this Graph at the start of every session (Epistemic Sync) to understand the user's current skill level.
+#### 5. The Exocortex (Global Context via MCP Memory Service)
+Long-term knowledge and lessons learned are not stored in unreliable local chat history. Instead, they are structured as flat, semantic entities in a local SQLite vector database (accessed via the Memory Service MCP). The AI searches this vector database at the start of every session (Epistemic Sync) to understand the user's current skill level.
 
 ---
 
@@ -58,7 +58,7 @@ This workflow solves the biggest problem beginners face with standard AI assista
 *   **Result:** You spend more time explaining the project to the AI than actually learning.
 
 ✅ **The New Way (Agentic IDE)**
-*   **Integration:** The AI sees the repository, understands the dependencies (via GitNexus), and knows the user's history (via Exocortex/Memory Graph).
+*   **Integration:** The AI sees the repository, understands the dependencies (via GitNexus), and knows the user's history (via Exocortex 2.0).
 *   **Flow:** The AI updates `docs/plan.md`, and we immediately dive into problem-solving.
 *   **Result:** A seamless transition from writing isolated scripts to building complex systems with a mentor who always sees the big picture.
 

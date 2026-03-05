@@ -46,11 +46,11 @@ Trigger it in the Cascade chat by typing `/review`. Instead of just fixing bugs,
 The `templates/mcp_config.json` demonstrates how to securely connect:
 1. **GitNexus:** For AST-based semantic code graphs (Blast radius analysis).
 2. **GitHub MCP:** For remote repository management using securely stored environmental variables (`${env:GITHUB_PAT}`).
-3. **Memory:** For your local Knowledge Graph (Exocortex) that tracks your skills, preferences, and goals.
+3. **Memory Service (`mcp-memory-service`):** A high-performance SQLite (`sqlite-vec`) backend providing your local Knowledge Graph (Exocortex 2.0). It tracks your skills, preferences, and goals using semantic flat-text tags.
 4. **Sequential Thinking:** For forcing the AI to break down complex logical puzzles.
 
 ### 4. The Exocortex Protocol
-This config utilizes a highly advanced local memory setup. It forces the AI to read an MCP Memory Graph at the start of every session, allowing the AI to remember your skill level, previous mistakes, and architectural preferences locally without relying on external repositories.
+This config utilizes a highly advanced local memory setup. It forces the AI to read an SQLite vector database at the start of every session (via `mcp3_memory_search`), allowing the AI to seamlessly remember your skill level, previous mistakes, and architectural preferences locally. It achieves sub-5ms query times by replacing the legacy JSONL graph with semantic embedding models.
 
 ## 💡 Core Philosophies Enforced
 *   **80/20 Rule:** 80% planning in Chat mode, 20% execution in Write mode.

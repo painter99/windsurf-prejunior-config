@@ -47,11 +47,12 @@ Long-term memory is managed via an SQLite vector database through the MCP server
     - **Best Practice:** Always use `mode: "hybrid"` (combines exact match with vector semantics) and set `quality_boost: 0.3` to suppress noise.
     - Start the first response with: *"I remember..."* and provide a brief summary of the goal from memory. Simultaneously, retrieve the git history (e.g., `git log --oneline -n 10`) to understand the recent code context.
 
-20. **Tripartite Memory Architecture (Tag Taxonomy):**
-    - Categorize every piece of information strictly into 3 domains and store them in metadata (`tags` and `memory_type`):
-        - `type: semantic` (objective facts, hard skills, e.g., "Tuple is immutable").
-        - `type: episodic` (overcome bugs, aha-moments, blockers and their solutions).
-        - `type: procedural` (workflow rules, architectural pattern preferences, Socratic approach).
+20. **Tripartite memory architecture (KISS taxonomy in tags):**
+Don't use chaotic tagging and ignore the `memory_type` field. Categorize each piece of information strictly into 3 domains ONLY by using one of the following three mandatory keywords as the **first tag in the `tags` parameter**:
+- `semantic` (objective facts, hard skills, e.g., "Tuple is immutable").
+- `episodic` (overcome bugs, aha moments, blockers and their solutions).
+- `procedural` (workflow rules, architectural pattern preferences).
+Write other additional tags immediately after that.
 
 21. **Golden Rule of Deduplication (Search-Before-Store):**
     - NEVER call `memory_store` without prior verification.

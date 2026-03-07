@@ -23,6 +23,8 @@ Instead of copy-pasting code from a browser, this setup integrates the AI direct
 windsurf-prejunior-config/
 ├── rules/
 │   └── global_rules.md       # The "Constitution" for Cascade
+├── skills/
+│   └── prompt-snr-optimizer/ # Example of custom Cascade Skill
 ├── workflows/
 │   └── review.md             # Custom Socratic Code Review workflow
 ├── templates/
@@ -42,14 +44,19 @@ Copy the contents of `rules/global_rules.md` into your Windsurf Global Rules set
 Place `workflows/review.md` into your project's `.windsurf/workflows/` directory. 
 Trigger it in the Cascade chat by typing `/review`. Instead of just fixing bugs, the AI will explain the root cause and ask *you* how you want to fix it.
 
-### 3. MCP Servers Configuration
+### 3. Custom AI Skills
+I provide curated agentic skills (e.g., `prompt-snr-optimizer`) in the `skills/` directory. You have two options for using them:
+- **Global (Recommended):** Copy the skill folder to `~/.codeium/windsurf/skills/` (Linux/Mac) to use it across all your projects.
+- **Local:** Copy the skill folder to `.windsurf/skills/` inside a specific project to restrict its usage.
+
+### 4. MCP Servers Configuration
 The `templates/mcp_config.json` demonstrates how to securely connect:
 1. **GitNexus:** For AST-based semantic code graphs (Blast radius analysis).
 2. **GitHub MCP:** For remote repository management using securely stored environmental variables (`${env:GITHUB_PAT}`).
 3. **Memory Service (`mcp-memory-service`):** A high-performance SQLite (`sqlite-vec`) backend providing your local Knowledge Graph (Exocortex 2.0). It tracks your skills, preferences, and goals using semantic flat-text tags.
 4. **Sequential Thinking:** For forcing the AI to break down complex logical puzzles.
 
-### 4. The Exocortex Protocol
+### 5. The Exocortex Protocol
 This config utilizes a highly advanced local memory setup. It forces the AI to read an SQLite vector database at the start of every session (via `mcp3_memory_search`), allowing the AI to seamlessly remember your skill level, previous mistakes, and architectural preferences locally. It achieves sub-5ms query times by replacing the legacy JSONL graph with semantic embedding models.
 
 ## 💡 Core Philosophies Enforced

@@ -23,8 +23,7 @@ Instead of copy-pasting code from a browser, this setup integrates the AI direct
 windsurf-prejunior-config/
 ├── rules/
 │   └── global_rules.md       # The "Constitution" for Cascade
-├── skills/
-│   └── prompt-snr-optimizer/ # Example of custom Cascade Skill
+├── skills/                   # Custom Cascade Skills
 ├── workflows/
 │   └── review.md             # Custom Socratic Code Review workflow
 ├── templates/

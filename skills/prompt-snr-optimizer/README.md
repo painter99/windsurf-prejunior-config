@@ -154,7 +154,7 @@ Semantic Fidelity > Safety > Variable Preservation > Output Determinism > Compre
 
 This tool originated as a personal project. Although every effort has been made during its development to ensure it is a highly functional, safe, and reliable utility for enterprise prompt engineering, the software is provided **"as is"**, completely without warranty of any kind, express or implied. 
 
-Use of this tool is strictly at your own risk. The author assumes no liability or responsibility for any lost data, misconfigured prompts, unintended AI behaviors, security vulnerabilities within generated skills, or any direct or indirect damages arising from the use of this software.  
+Use of this tool is strictly at your own risk. The author assumes no liability or responsibility for any lost data, misconfigured prompts, unintended AI behaviors, security vulnerabilities within generated (system) prompts, or any direct or indirect damages arising from the use of this software.  
 
 ---
 
